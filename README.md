@@ -17,6 +17,4 @@ This script is still in the development stage and it shall be used to analize si
 -MultiQC v1.7
 
 To chech multiqc results, use firefox multiqc_report.html  
-# RNAseq_nextflow_pipeline
-# RNAseq_nextflow_pipeline
-# RNAseq_nextflow_pipeline
+
