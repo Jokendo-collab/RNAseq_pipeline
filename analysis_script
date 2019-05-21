@@ -1,0 +1,12 @@
+#!/bin/sh
+#SBATCH --account=cbio
+#SBATCH --partition=ada
+#SBATCH --nodes=1 --ntasks=30
+#SBATCH --time=72:00:00
+#SBATCH --job-name="ten_samples_nexflow" 
+#SBATCH --mail-user=oknjav001@myuct.ac.za
+#SBATCH --mail-type=END,FAIL
+
+cd /scratch/oknjav001/transcriptomics/complete_batch
+
+nextflow run nf-core/rnaseq --singleEnd --reads '/scratch/oknjav001/transcriptomics/complete_batch/bal_first_batch/trial_samples/*.fastq.gz' --genome GRCh37 --skip_genebody_coverage -profile singularity -c singularity.config
